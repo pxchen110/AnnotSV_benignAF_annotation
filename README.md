@@ -38,4 +38,12 @@ If query SVs had allele frequency annotation, they must meet the following condi
 2. Benign allele frequency higher than threshold: Compare to pathogenic variants, benign variants may have higher allele frequency among population(tend to be common variant). AnnotSV defaultly set annotation threshold to be 0.01, which means that if query SV compare to one database record and also database AF is higher than 0.01 (=1%)(in default), it can have annotation output. If you want to change AF threshold, you can refer to option setting section. 
 
 ## Parameter/option setting and ouptut column interpretation
-In default, AnnotSV can automatically include allele frequency annotation since v3.1.3. If you want to change annotation threshold, please add ```benignAF``` 
+In default, AnnotSV can automatically include allele frequency annotation since v3.1.3. If you want to change annotation threshold, please add ```benignAF``` in your command, the executable threshold is **[0.001 - 0.1]**.     
+
+The output file contained 12 allele frequency related columns:
+B_gain_source / B_gain_coord / B_gain_AFmax.   
+B_loss_source / B_loss_coord / B_loss_AFmax.   
+B_ins_source / B_ins_coord / B_ins_AFmax.   
+B_inv_source / B_inv_coord / B_inv_AFmax.   
+
+Please refer to your own output and check these columns !
